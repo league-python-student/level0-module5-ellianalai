@@ -13,8 +13,10 @@ import unittest
 #  checks the function returns 100. Since a multiply function isn't defined,
 #  you have to define one with the correct input variable(s) and return
 #  statement. Create your functions below and not inside the test class.
-
-
+def multiply(num1, num2):
+    return num1 * num2
+def str_cat( var1,var2,var3):
+    return var1+' ' +var2+' ' + var3
 # ======================= DO NOT EDIT THE CODE BELOW =========================
 
 class FunctionTests(unittest.TestCase):
