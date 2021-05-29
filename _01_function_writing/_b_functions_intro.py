@@ -17,6 +17,32 @@ def multiply(num1, num2):
     return num1 * num2
 def str_cat( var1,var2,var3):
     return var1+' ' +var2+' ' + var3
+def greater_than(num1,num2):
+    return num1<num2
+def get_random_number (low,high):
+    return random.randint(low,high)
+def is_vegetable(edible_stuff = ''):
+    if edible_stuff == 'apple':
+        return False
+    if edible_stuff== 'celery':
+        return True
+    if edible_stuff == 'mushroom':
+        return False
+    if edible_stuff == 'tomato':
+        return False
+    if edible_stuff == '':
+        return False
+def make_appointment (preferred_time_of_day = ''):
+    if preferred_time_of_day == 'morning':
+        return '8 am'
+    if preferred_time_of_day == 'afternoon':
+        return '1 pm'
+    if preferred_time_of_day == 'evening':
+        return '5 pm'
+    if preferred_time_of_day == '':
+        return '8 am'
+    if preferred_time_of_day == 'graveyard':
+        return 'error'
 # ======================= DO NOT EDIT THE CODE BELOW =========================
 
 class FunctionTests(unittest.TestCase):
