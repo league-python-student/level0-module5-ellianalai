@@ -2,7 +2,9 @@
 Have the turtle draw a row of houses.
 """
 from tkinter import messagebox, simpledialog, Tk
-
+def draw_house(turtle1):
+    turtle1.left(90)
+    turtle1.forward(100)
 
 if __name__ == '__main__':
     # TODO)
