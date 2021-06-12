@@ -1,12 +1,52 @@
 """
 Have the turtle draw a row of houses.
 """
+import random
 from tkinter import messagebox, simpledialog, Tk
-def draw_house(turtle1):
-    turtle1.left(90)
-    turtle1.forward(100)
+import turtle
+def pointy_roof(turtle1):
+       turtle1.left(45)
+       turtle1.forward(25)
+       turtle1.right(90)
+       turtle1.forward(25)
+       turtle1.left(45)
+def flat_roof(turtle1):
+    turtle1.forward(50)
+def draw_house(turtle1,height):
+
+        turtle1.pencolor('green')
+        turtle1.pensize(15)
+        turtle1.forward(30)
+        turtle1.pencolor('brown')
+        turtle1.pensize(10)
+        turtle1.left(90)
+        turtle1.forward(height)
+        turtle1.right(90)
+        if height > 175:
+            flat_roof(turtle1)
+        else:
+            pointy_roof(turtle1)
+        turtle1.right(90)
+        turtle1.forward(height)
+        turtle1.pencolor('green')
+        turtle1.pensize(15)
+        turtle1.left(90)
+        turtle1.forward(30)
+
+
+
+
 
 if __name__ == '__main__':
+    window=Tk()
+    window.withdraw()
+    ellie = turtle.Turtle()
+    ellie.penup()
+    ellie.goto(-300,-200)
+    ellie.pendown()
+    for i in range(10):
+        draw_house(ellie,random.randint(20,300))
+
     # TODO)
     #   1) Move the turtle to the left side of the window near the bottom.
     #   2) Draw ONE flat-topped house with height=100 and green grass after it.
@@ -27,4 +67,5 @@ if __name__ == '__main__':
     #      (JUST the roof part): draw_pointy_roof, draw_flat_roof
     #   11) By calling the correct "roof" function, make large houses have
     #      flat roofs and all the others have pointy roofs.
+    turtle.done()
     pass
