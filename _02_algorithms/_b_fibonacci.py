@@ -7,8 +7,10 @@ from tkinter import messagebox, simpledialog, Tk
 
 
 if __name__ == '__main__':
+    window=Tk()
+    window.withdraw()
     # TODO)
-    #  here is more than one way to code a solution to this.
+    #  There is more than one way to code a solution to this.
     #  The following steps give you some guidelines for one of them.
     #  1. Declare and initialize three int variables: number1, number2,
     #     and sum.
@@ -18,4 +20,14 @@ if __name__ == '__main__':
     #     prints it. The for loop should repeat 10 times.
     #  4. Now try to figure out how to change the variables before the for
     #     loop repeats so the sequence of numbers is correct.
+    num1 = 0
+    num2 = 1
+    sum = 1
+    print('0')
+    print('1')
+    for i in range (100):
+        sum = num1 + num2
+        print(sum)
+        num1 = num2
+        num2 = sum
     pass
