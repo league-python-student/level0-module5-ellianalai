@@ -28,8 +28,22 @@ if __name__ == '__main__':
     for i in range(3):
         for f in range(3):
             print(str(i)+ ' ' + str(f))
-    for i in range(1,8,3):
-        for b in range(2,9,3):
-            for c in range(3,10,3):
-                print(str(i) + ' ' + str(b) + ' ' + str(c))
+
+    for i in range(3):
+        str2 = ' '
+        for k in range (1,4):
+            str2 += str(k + (i*3)) + ' '
+        print(str2)
+
+    for i in range(10):
+        str2= ' '
+        for b in range(1,11):
+            str2 += str(b + (i*10)) + ' '
+        print(str2)
+
+    for i in range (1,7):
+        str2 = ' '
+        for c in range(i):
+           str2 += "* "
+        print(str2)
     pass
